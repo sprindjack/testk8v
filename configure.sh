@@ -16,7 +16,25 @@ cat <<-EOF > /etc/v2ray/config.json
             },
             "streamSettings": {
                 "network": "ws",
-                "wsSettings":{
+                "wsSettings": {
+                    "path": "/pic"
+                }
+            }
+        },
+        {
+            "port": 443,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "8feb2bc6-fdfe-4e50-b9b6-08f87f69dcf6",
+                        "alterId": 64
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "wsSettings": {
                     "path": "/pic"
                 }
             }
@@ -24,7 +42,8 @@ cat <<-EOF > /etc/v2ray/config.json
     ],
     "outbounds": [
         {
-            "protocol": "freedom"
+            "protocol": "freedom",
+            "settings": {}
         }
     ]
 }
